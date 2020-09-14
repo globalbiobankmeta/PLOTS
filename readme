@@ -1,0 +1,5 @@
+docker build -t "plotv2:0.3" .
+docker tag plotv2:0.3 gcr.io/global-biobank-meta-analysis/plotv2:0.3
+gcloud docker -- push gcr.io/global-biobank-meta-analysis/plotv2:0.3
+docker tag plotv2:0.3 gcr.io/finngen-refinery-dev/plotv2:0.3
+gcloud docker -- push gcr.io/finngen-refinery-dev/plotv2:0.3
