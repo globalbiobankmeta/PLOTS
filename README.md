@@ -7,4 +7,4 @@ This repository is used for QC of individual GWAS summary statistis files in Glo
 
 1. Use [./readme](./readme) and [./Dockerfile](./Dockerfile) to generate the docker image
 
-2. The WDL workflow in [https://github.com/globalbiobankmeta/META_ANALYSIS/blob/master/wdl/munge_sumstats_beforeQC_obtain_QClist.wdl][munge_sumstats_beforeQC_obtain_QClist.wdl] and [https://github.com/globalbiobankmeta/META_ANALYSIS/blob/master/wdl/munge_sumstats_beforeQC_obtain_QClist.json][munge_sumstats_beforeQC_obtain_QClist.json] is used to compare the allele frequency of genetic variants in individual GWAS summary statisic files. 
+2. The WDL workflow in [https://github.com/globalbiobankmeta/META_ANALYSIS/blob/master/wdl/munge_sumstats_beforeQC_obtain_QClist.wdl](munge_sumstats_beforeQC_obtain_QClist.wdl) and [https://github.com/globalbiobankmeta/META_ANALYSIS/blob/master/wdl/munge_sumstats_beforeQC_obtain_QClist.json](munge_sumstats_beforeQC_obtain_QClist.json) is used to compare the allele frequency of genetic variants in individual GWAS summary statisic files. 
