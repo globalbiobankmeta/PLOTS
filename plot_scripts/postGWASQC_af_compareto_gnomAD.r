@@ -63,10 +63,12 @@ data$flip = 0
 data$flip[flipIndex] = 1
 #flipIndex_norm = setdiff(flipIndex, rmIndex)
 write.table(data, paste0(opt$bbkpop,"_postGWASQC_comparetognomAD.txt"), col.names=T, row.names=F, quote=F, sep="\t")
-write.table(data[which(data$flipIndex == 1), ], paste0(opt$bbkpop,"_postGWASQC_comparetognomAD_ambiguity.txt"), col.names=T, row.names=F, quote=F, sep="\t")
+write.table(data[which(data$flip == 1), ], paste0(opt$bbkpop,"_postGWASQC_comparetognomAD_ambiguity.txt"), col.names=T, row.names=F, quote=F, sep="\t")
 
 #data = data[-rmIndex,]
 #write.table(data, paste0(opt$bbkpop,"_postGWASQC.txt"), col.names=T, row.names=F, quote=F, sep="\t")
+if(FALSE){
+
 print(dim(data))
 title_plot = paste0(nrow(data), " variants in total")
 #xl=paste0(opt$bbkpop,"_postGWASQCd_comparetognomAD")
@@ -126,4 +128,4 @@ png(paste0(opt$bbkpop,"_postGWASQCd_comparetognomAD_afterMdistQC_rmtop1perc.png"
         print(p)
 dev.off()
 write.table(data1[1:a,], paste0(opt$bbkpop,"_postGWASQC_comparetognomAD_MDtop1perc.txt"), col.names=T, row.names=F, quote=F, sep="\t")
-
+}

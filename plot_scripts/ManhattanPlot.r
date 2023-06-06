@@ -267,7 +267,7 @@ if(ismanhattanplot == TRUE){
 }
 
 if(issummarytable == TRUE){
-	tophits <- which(resIn$log10P > -log10(5E-8))
+	tophits <- which(resIn$log10P > -log10(sigThreshold))
 	if(length(tophits)>0){
 		tophits <- resIn[tophits,]
         	tophits$numCHR <- as.numeric(gsub("X","23",tophits$CHR))
@@ -547,8 +547,8 @@ png(filename = file_mh, width = mh.width, height = mh.height, pointsize = points
 
 	addLegend <- which(c("blue","green3") %in% unique(plotdata$highlightColor))
 
-	if(length(addLegend) > 0){	
-		legend("topleft",c("Known Loci","Potentially Novel Loci")[addLegend],col=c("blue","green3")[addLegend],pch=15,bty="n")
-	}
+	#if(length(addLegend) > 0){	
+	#	legend("topleft",c("Known Loci","Potentially Novel Loci")[addLegend],col=c("blue","green3")[addLegend],pch=15,bty="n")
+	#}
 dev.off()
 }

@@ -108,7 +108,6 @@ if(!opt$log10p) {
 quants <- c(0.7,0.5,0.1,0.01, 0.001)
 pvalVec = as.vector(gwas[[opt$pvalue]])
 pvalVec = pvalVec[!is.na(pvalVec)]
-pvalVec[which(pvalVec)] = 
 lambda  <- round(  quantile(  (qchisq(1-pvalVec, 1) ), probs=quants ) / qchisq(quants,1), 3)
 
 
