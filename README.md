@@ -2,8 +2,6 @@
 
 Scripts to make plots and generate lists of variants with different freq compared to gnomAD and having strand ambiguity
 
-# Global Biobank Meta-analysis Initiative meta-analysis workflow
-
 This repository is used for QC of individual GWAS summary statistis files in Global Biobank Meta-analysis Initiative. 
 [WDL](https://github.com/openwdl/wdl) workflows and Google Compute Engine are used for computing. The workflows consist of cleaning/munging input files to the same format and running a meta-analysis.
 
